@@ -1,10 +1,10 @@
 ```mermaid
 graph TD
     %% 定义样式
-    classDef process fill:#bde0fe,stroke:#666,stroke-width:6px,color:black;
-    classDef decision fill:#ffea00,stroke:#f5a623,stroke-width:8px,color:black;
-    classDef startend fill:#fffacd,stroke:#f5a623,stroke-width:8px,color:black;
-    classDef output fill:#bde0fe,stroke:#333,stroke-width:8px,color:black;
+    classDef process fill:#bde0fe,stroke:#666,stroke-width:10px,color:black;
+    classDef decision fill:#ffea00,stroke:#f5a623,stroke-width:12px,color:black;
+    classDef startend fill:#fffacd,stroke:#f5a623,stroke-width:12px,color:black;
+    classDef output fill:#bde0fe,stroke:#333,stroke-width:12px,color:black;
 
     %% --- 右侧主流程 ---
     subgraph MainFlow [主流程]
