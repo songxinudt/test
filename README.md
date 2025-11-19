@@ -1,3 +1,4 @@
+```mermaid
 graph TD
     %% 定义样式
     classDef process fill:#bde0fe,stroke:#666,stroke-width:1px,color:black;
@@ -36,7 +37,7 @@ graph TD
         Opt_Decomp[根据不同的种群参数<br/>分解信号]:::process
         Opt_Fitness[计算每个位置对应的平均包络熵<br/>作为适应度函数，并记录<br/>当前最优位置]:::process
         
-        %% === 修复点：加上双引号 ===
+        %% 修复点：必须加双引号
         Dec_P{"P < 0.5?"}:::decision
         Dec_A{"|A| < 1?"}:::decision
         
@@ -69,6 +70,7 @@ graph TD
         Dec_T -- 否 (No) --> Opt_Output
     end
 
-    %% 连接两个子图的逻辑关系 (用虚线表示数据流向)
+    %% 连接两个子图的逻辑关系
     Optimize -.-> Opt_Init
     Opt_Output -.-> Optimize
+```
