@@ -1,5 +1,3 @@
-# test
-```mermaid
 graph TD
     %% 定义样式
     classDef process fill:#bde0fe,stroke:#666,stroke-width:1px,color:black;
@@ -38,14 +36,15 @@ graph TD
         Opt_Decomp[根据不同的种群参数<br/>分解信号]:::process
         Opt_Fitness[计算每个位置对应的平均包络熵<br/>作为适应度函数，并记录<br/>当前最优位置]:::process
         
-        Dec_P{P < 0.5?}:::decision
-        Dec_A{|A| < 1?}:::decision
+        %% === 修复点：加上双引号 ===
+        Dec_P{"P < 0.5?"}:::decision
+        Dec_A{"|A| < 1?"}:::decision
         
         Action_Spiral[鲸鱼螺旋收缩]:::process
         Action_Shrink[鲸鱼收缩包围]:::process
         Action_Random[鲸鱼进行随机搜索]:::process
         
-        Dec_T{T <= Tmax<br/>(是否达到最大迭代)}:::decision
+        Dec_T{"T <= Tmax<br/>(是否达到最大迭代)"}:::decision
         
         Action_Update[更新鲸鱼种群的随机位置<br/>并执行扰动操作]:::process
         Opt_Output[输出优化过程中<br/>使平均包络熵最小的<br/>K 和 α 组合]:::output
@@ -73,4 +72,3 @@ graph TD
     %% 连接两个子图的逻辑关系 (用虚线表示数据流向)
     Optimize -.-> Opt_Init
     Opt_Output -.-> Optimize
-```
